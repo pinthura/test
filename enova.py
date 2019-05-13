@@ -31,7 +31,12 @@ sns.pairplot(tr)
 sns.distplot(tr['Price'])
 sns.distplot(tr['Retail'])
 plt.box(tr['Retail'])
+
 plt.scatter(tr['Carats'],tr['Price'])
+plt.xlabel('Retail')
+plt.ylabel('Price')
+plt.title('Scatter Plot of R vs P')
+
 sns.catplot(x="Vendor", y="Price", hue="Polish1", kind="swarm", data=tr)
 corr=tr.corr() #correlation
 # plot the heatmap
